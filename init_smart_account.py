@@ -16,6 +16,7 @@ HORIZON_ADDRESS = os.environ.get('HORIZON_ADDRESS')
 FRIENDBOT_ADDRESS = os.environ.get('FRIENDBOT_ADDRESS')
 NETWORK_PASSPHRASE = os.environ.get('NETWORK_PASSPHRASE')
 SMART_PROGRAM_IMAGE_ADDRESS = os.environ.get('SMART_PROGRAM_IMAGE_ADDRESS')
+SMART_PROGRAM_IMAGE_HASH = os.environ.get('SMART_PROGRAM_IMAGE_HASH')
 EXECUTION_BASE_FEE = os.environ.get('EXECUTION_BASE_FEE')
 
 SMART_ACCOUNT_ADDRESS = os.environ.get('SMART_ACCOUNT_ADDRESS')
@@ -61,7 +62,7 @@ percent51 = int(len(WORKER_ADDRESSES)/2) + 1
 sign_and_submit([SetOptions(low_threshold=percent51, med_threshold=percent51, high_threshold=percent51)])
 
 sign_and_submit([ManageData('smart_program_image_address', SMART_PROGRAM_IMAGE_ADDRESS), ManageData(
-    'execution_base_fee', EXECUTION_BASE_FEE)])
+    'execution_base_fee', EXECUTION_BASE_FEE), ManageData('smart_program_image_hash', SMART_PROGRAM_IMAGE_HASH)])
 
 operations = []
 counter = 1
