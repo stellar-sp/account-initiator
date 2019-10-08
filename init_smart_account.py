@@ -62,7 +62,8 @@ percent51 = int(len(WORKER_ADDRESSES)/2) + 1
 sign_and_submit([SetOptions(low_threshold=percent51, med_threshold=percent51, high_threshold=percent51)])
 
 sign_and_submit([ManageData('smart_program_image_address', SMART_PROGRAM_IMAGE_ADDRESS), ManageData(
-    'execution_base_fee', EXECUTION_BASE_FEE), ManageData('smart_program_image_hash', SMART_PROGRAM_IMAGE_HASH)])
+    'execution_base_fee', EXECUTION_BASE_FEE), ManageData('smart_program_image_hash', SMART_PROGRAM_IMAGE_HASH),
+                 ManageData('last_paging_token_made_change', '0')])
 
 operations = []
 counter = 1
